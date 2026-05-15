@@ -1,0 +1,13 @@
+int findMin(int* nums, int numsSize) {
+    int sqd = 0;
+    int dir = numsSize - 1;
+    while (sqd < dir) {
+        int mei = (sqd + dir) / 2;
+        if (nums[mei] > nums[dir]) {
+            sqd = mei + 1;
+        } else {
+            dir = mei;
+        }
+    }
+    return nums[sqd];
+}
